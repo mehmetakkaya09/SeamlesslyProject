@@ -1,7 +1,0 @@
-com\seamlessly\step_definitions\LoginPage_StepDefinitions.class
-com\seamlessly\utilities\Driver.class
-com\seamlessly\runners\FailedTestRunner.class
-com\seamlessly\step_definitions\Hooks.class
-com\seamlessly\runners\CukesRunner.class
-com\seamlessly\pages\LoginPage.class
-com\seamlessly\utilities\ConfigurationReader.class
