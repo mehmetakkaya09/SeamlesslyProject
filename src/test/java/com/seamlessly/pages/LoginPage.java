@@ -24,7 +24,7 @@ public class LoginPage {
         loginButton.click();
     }
 
-    @FindBy(id = "lost-password")
+    @FindBy(css = "a#lost-password")
     public WebElement forgotPassword;
 
     @FindBy(xpath = "//*[normalize-space(text()) = 'Log in with a device']")
@@ -49,6 +49,6 @@ public class LoginPage {
     @FindBy(xpath = "//input[@id='user' and @required='required']")
     public WebElement blankText;
 
-    @FindBy(id = "reset-password-submit")
+    @FindBy(css = "input#reset-password-submit")
     public WebElement resetPassword;
 }

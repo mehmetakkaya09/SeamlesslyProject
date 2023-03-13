@@ -1,6 +1,7 @@
 package com.seamlessly.step_definitions;
 
 import com.seamlessly.pages.LoginPage;
+import com.seamlessly.utilities.BrowserUtility;
 import com.seamlessly.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -21,8 +22,10 @@ public class Hooks {
     @After
     public void after(Scenario scenario) {
         if (scenario.isFailed()) {
+            BrowserUtility.sleep(2);
             byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getName());
+            BrowserUtility.sleep(2);
         }
     }
     @After

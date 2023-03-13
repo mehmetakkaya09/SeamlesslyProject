@@ -5,12 +5,13 @@ Feature: Login functionality
   Background: Homepage
     Given User is on the login page
 
-@smoke @regression
+  @smoke @regression
   Scenario: User can ogin with valid credentials by clicking login button
     When user can write valid username
     And user can write valid password
     And user can click login button
     Then user can see dashboard
+
   @smoke @regression
   Scenario: User can ogin with valid credentials by pressing enter key
     When user can write valid username
@@ -53,19 +54,15 @@ Feature: Login functionality
     Then User can see the password
 
   Scenario: user can see the "Forgot password?" link
-    When User is on the login page
     Then user can see the Forgot password link
+
   @smoke @regression
   Scenario: user can see the "Reset Password" button on the next page after clicking on forget password link
-    When User is on the login page
     And User can click Forgot password link
-    And User is on reset password page
     Then user can see reset password link
 
-    Scenario: user can see valid username placeholder
-      When User is on the login page
-      Then user can see username placeholder
+  Scenario: user can see valid username placeholder
+    Then user can see username placeholder
 
   Scenario: user can see valid username placeholder
-    When User is on the login page
     Then user can see password placeholder

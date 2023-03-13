@@ -96,11 +96,11 @@ public class LoginPage_StepDefinitions {
     @And("User can click Forgot password link")
     public void userCanClickForgotPasswordLink() {
         loginPage.forgotPassword.click();
-    }
-
-    @And("User is on reset password page")
-    public void userIsOnResetPasswordPage() {
-        loginPage.resetPassword.isDisplayed();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Then("user can see reset password link")
