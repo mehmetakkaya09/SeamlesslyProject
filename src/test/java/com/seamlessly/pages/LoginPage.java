@@ -42,9 +42,13 @@ public class LoginPage {
     @FindBy(xpath = "//a[@class='toggle-password']")
     public WebElement passwordEye;
 
-    @FindBy(xpath = "//input[@placeholder = 'Username or email']")
-    public WebElement placeUsername;
 
-    @FindBy(xpath = "//input[@placeholder='password']")
-    public WebElement placePassword;
+    @FindBy(css = "p.warning.wrongPasswordMsg")
+    public WebElement wrongPassword;
+
+    @FindBy(xpath = "//input[@id='user' and @required='required']")
+    public WebElement blankText;
+
+    @FindBy(id = "reset-password-submit")
+    public WebElement resetPassword;
 }
