@@ -1,6 +1,7 @@
 package com.seamlessly.step_definitions;
 
 import com.seamlessly.pages.LoginPage;
+import com.seamlessly.utilities.BrowserUtility;
 import com.seamlessly.utilities.ConfigurationReader;
 import com.seamlessly.utilities.Driver;
 import io.cucumber.java.en.And;
@@ -96,11 +97,7 @@ public class LoginPage_StepDefinitions {
     @And("User can click Forgot password link")
     public void userCanClickForgotPasswordLink() {
         loginPage.forgotPassword.click();
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        BrowserUtility.sleep(2);
     }
 
     @Then("user can see reset password link")
